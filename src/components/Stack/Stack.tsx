@@ -1,9 +1,7 @@
 "use client";
-import { ComponentProps, useState } from "react";
+import { ComponentProps } from "react";
 import { StackCard } from "@/components/Stack/Card/StackCard";
 import { v4 as uuid } from "uuid";
-import { ChevronDown } from "@/components/svg/Chevron/ChevronDown";
-import { ChevronUp } from "@/components/svg/Chevron/ChevronUp";
 
 export type Card = {
   label: string;
