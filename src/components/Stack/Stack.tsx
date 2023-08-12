@@ -15,11 +15,11 @@ export type Stack = {
 export type StackProps = Stack & ComponentProps<"div">;
 export const Stack = ({ stackName, cards }: StackProps) => {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col mt-5">
       <div className="flex flex-row items-center justify-items-center gap-3">
         <h3 className="text-2xl font-semibold mb-1">{stackName}</h3>
       </div>
-      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-5 self-center">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-5">
         {cards.map((card) => (
           <StackCard {...card} key={uuid()} />
         ))}
