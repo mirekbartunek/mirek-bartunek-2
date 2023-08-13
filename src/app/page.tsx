@@ -41,7 +41,7 @@ export default function Home() {
       <section id="projects">
         <h2 className="font-bold text-3xl my-2">Projects</h2>
         <p>
-          Tons small projects, none of which are interesting, but you can
+          Tons of small projects, none of which are interesting, but you can
           checkout my{" "}
           <Link href="https://github.com/mirekbartunek" className="underline">
             GitHub
