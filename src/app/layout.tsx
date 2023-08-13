@@ -8,6 +8,7 @@ import { Metadata } from "next";
 
 const lato = Lato({ weight: "400", subsets: ["latin"] });
 export const metadata: Metadata = {
+  metadataBase: new URL("https://miroslavbartunek.com"),
   title: {
     default: "Mirek Bartuněk",
     template: "%s | MB",

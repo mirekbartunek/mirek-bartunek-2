@@ -35,17 +35,14 @@ export const getNowPlaying = async () => {
       revalidate: 60,
     },
   });
-  console.count("revalidated?");
-  console.log(res.status);
   if (res.status === 204) {
     // not playing
-    // TODO add message: "Not Playing"
     return {
       status: res.status,
+      message: "Not Playing",
     };
   }
   if (!res.ok) {
-    console.log(await res.json());
     return {
       status: res.status,
       message: `Something went wrong`,
@@ -53,7 +50,6 @@ export const getNowPlaying = async () => {
   }
 
   const song = (await res.json()) as Song;
-  console.log(song.is_playing);
 
   return {
     status: res.status,
