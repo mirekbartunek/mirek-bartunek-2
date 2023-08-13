@@ -1,7 +1,6 @@
 import { ComponentProps } from "react";
 
 type ChevronDownProps = ComponentProps<"svg">;
-
 export const ChevronDown = ({ ...props }: ChevronDownProps) => {
   return (
     <svg
