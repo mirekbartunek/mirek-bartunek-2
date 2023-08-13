@@ -6,7 +6,7 @@ import Link from "next/link";
 export const NowPlaying = async () => {
   const res = await getNowPlaying();
   const className =
-    "bg-zinc-100 dark:bg-zinc-900 flex-row flex p-5 gap-5 text-sm rounded-lg items-center relative w-fit overflow-hidden text-ellipsis whitespace-nowrap";
+    "bg-zinc-300 dark:bg-zinc-900 flex-row flex p-5 gap-5 text-sm rounded-lg items-center relative w-fit overflow-hidden text-ellipsis whitespace-nowrap";
   if (res.status === 204 || res?.song?.is_playing === false) {
     return (
       <article className={className}>

@@ -1,4 +1,3 @@
-"use client";
 import { ComponentProps } from "react";
 import { StackCard } from "@/components/Stack/Card/StackCard";
 import { v4 as uuid } from "uuid";

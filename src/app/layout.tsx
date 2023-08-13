@@ -4,14 +4,27 @@ import clsx from "clsx";
 import { Footer } from "@/components/Layout/Footer/Footer";
 import { Header } from "@/components/Layout/Header/Header";
 import { Providers } from "@/components/Layout/Providers/Providers";
+import { Metadata } from "next";
 
 const lato = Lato({ weight: "400", subsets: ["latin"] });
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: "Mirek Bartuněk",
     template: "%s | MB",
   },
   description: "Frontend developer",
+  keywords: ["Miroslav Bartuněk", "Mirek Bartuněk", "Bartuněk"],
+  openGraph: {
+    title: "Mirek Bartuněk",
+    locale: "en-CZ",
+    siteName: "Mirek Bartuněk",
+    type: "website",
+    description: "Frontend developer", // TODO: Add url once deployed
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
