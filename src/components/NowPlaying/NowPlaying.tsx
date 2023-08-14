@@ -46,7 +46,7 @@ export const NowPlaying = async () => {
         className="absolute top-5 right-5 fill-[#1DB954]"
       />
       <Image
-        src={res.song?.item?.album?.images?.at(0)?.url!}
+        src={res.song.item.album.images.at(0)?.url!}
         alt={`Cover of ${res.song.item.album.name}`}
         className="max-w-sm"
         width={95}
@@ -55,11 +55,11 @@ export const NowPlaying = async () => {
       <Link
         className="flex flex-col"
         target="_blank"
-        href={res?.song?.item?.external_urls?.spotify!}
+        href={res.song.item.external_urls.spotify}
       >
         <h5 className="text-lg">{res.song.item.name}</h5>
         <span className="text-xs">
-          {res.song?.item?.artists?.at(0)?.name} - {res.song.item.album.name}
+          {res.song.item.artists.at(0)?.name} - {res.song.item.album.name}
         </span>
       </Link>
     </article>
