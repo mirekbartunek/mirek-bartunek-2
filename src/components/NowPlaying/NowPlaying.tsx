@@ -54,7 +54,7 @@ export const NowPlaying = async () => {
       />
       <Link
         className="flex flex-col"
-        target="_blankš"
+        target="_blank"
         href={res?.song?.item?.external_urls?.spotify!}
       >
         <h5 className="text-lg">{res.song.item.name}</h5>
