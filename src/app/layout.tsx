@@ -5,6 +5,7 @@ import { Footer } from "@/components/Layout/Footer/Footer";
 import { Header } from "@/components/Layout/Header/Header";
 import { Providers } from "@/components/Layout/Providers/Providers";
 import { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 
 const lato = Lato({ weight: "400", subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -44,6 +45,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           {children}
+          <Analytics />
           <Footer />
         </Providers>
       </body>
