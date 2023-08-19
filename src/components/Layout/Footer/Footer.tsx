@@ -14,7 +14,7 @@ export const Footer = () => {
           <NowPlaying />
         </div>
       </Suspense>
-      <p className="text-xs md:text-sm text-zinc-700 dark:text-zinc-500 mt-5 text-center">
+      <p className="text-xs md:text-sm text-zinc-700 dark:text-zinc-500 mt-5 text-center p-2">
         All trademarks are the property of their respective owners. THIS PROJECT
         IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND
       </p>

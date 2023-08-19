@@ -21,7 +21,8 @@ export const metadata: Metadata = {
     locale: "en-CZ",
     siteName: "Mirek Bartuněk",
     type: "website",
-    description: "Frontend developer", // TODO: Add url once deployed
+    description: "Frontend developer",
+    url: "https://miroslavbartunek.com",
   },
   robots: {
     index: true,

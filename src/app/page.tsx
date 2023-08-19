@@ -30,7 +30,7 @@ export default function Home() {
           programming, databases, frontend development and frontend design.
         </p>
       </section>
-      <hr />
+      <hr className="bg-zinc-800 dark:bg-zinc-300 h-px border-0" />
       <section id="tech-stack">
         <h2 className="font-bold text-3xl mt-2">Tech stack</h2>
         {techStack.map((stack) => (
