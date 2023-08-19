@@ -37,7 +37,7 @@ export default function Home() {
           <Stack {...stack} key={uuid()} />
         ))}
       </section>
-      <hr />
+      <hr className="bg-zinc-800 dark:bg-zinc-300 h-px border-0" />
       <section id="projects">
         <h2 className="font-bold text-3xl my-2">Projects</h2>
         <p>
