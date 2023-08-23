@@ -6,7 +6,7 @@ import Link from "next/link";
 export const NowPlaying = async () => {
   const res = await getNowPlaying();
   const className =
-    "bg-zinc-300 dark:bg-zinc-900 flex-row flex p-5 gap-5 text-sm rounded-lg items-center relative w-fit overflow-hidden text-ellipsis whitespace-nowrap";
+    "bg-zinc-300 dark:bg-zinc-900 flex-row flex p-5 gap-5 text-sm rounded-lg items-center relative overflow-hidden text-ellipsis whitespace-nowrap w-full cursor-pointer";
   if (res.status === 204 || res?.song?.is_playing === false) {
     return (
       <article className={className}>
@@ -48,7 +48,6 @@ export const NowPlaying = async () => {
       <Image
         src={res.song.item.album.images.at(0)?.url!}
         alt={`Cover of ${res.song.item.album.name}`}
-        className="max-w-sm"
         width={95}
         height={95}
       />
@@ -57,7 +56,9 @@ export const NowPlaying = async () => {
         target="_blank"
         href={res.song.item.external_urls.spotify}
       >
-        <h5 className="text-lg">{res.song.item.name}</h5>
+        <h5 className="text-lg break-words overflow-hidden">
+          {res.song.item.name}
+        </h5>
         <span className="text-xs">
           {res.song.item.artists.at(0)?.name} - {res.song.item.album.name}
         </span>

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { ArrowClockwise } from "@/components/svg/ArrowClockwise/ArrowClockwise";
 
 export const ThemeSwitcher = () => {
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [isMounted, setIsMounted] = useState<boolean>(false);
   useEffect(() => {
     setIsMounted(true);
@@ -16,9 +16,9 @@ export const ThemeSwitcher = () => {
     <button
       className="p-2"
       name="theme-switcher"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
-      {theme === "dark" ? <Sun /> : <Moon />}
+      {resolvedTheme === "dark" ? <Sun /> : <Moon />}
     </button>
   );
 };
