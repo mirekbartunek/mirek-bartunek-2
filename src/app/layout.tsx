@@ -15,7 +15,6 @@ export const metadata: Metadata = {
     template: "%s | MB",
   },
   description: "Frontend developer",
-  keywords: ["Miroslav Bartuněk", "Mirek Bartuněk", "Bartuněk"],
   openGraph: {
     title: "Mirek Bartuněk",
     locale: "en-CZ",
