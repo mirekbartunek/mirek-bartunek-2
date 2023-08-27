@@ -3,7 +3,7 @@ import { Lato } from "next/font/google";
 import clsx from "clsx";
 import { Footer } from "@/components/Layout/Footer/Footer";
 import { Header } from "@/components/Layout/Header/Header";
-import { Providers } from "@/components/Layout/Providers/Providers";
+import { ThemeProvider } from "@/components/Layout/Providers/Providers";
 import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -42,12 +42,12 @@ export default function RootLayout({
           lato.className
         )}
       >
-        <Providers>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
           {children}
           <Analytics />
           <Footer />
-        </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );
