@@ -6,14 +6,14 @@ import Link from "next/link";
 export const NowPlaying = async () => {
   const res = await getNowPlaying();
   const className =
-    "bg-zinc-300 dark:bg-zinc-900 flex-row flex p-5 gap-5 text-sm rounded-lg items-center relative overflow-hidden text-ellipsis whitespace-nowrap w-full cursor-pointer";
+    "bg-zinc-300 dark:bg-zinc-900 flex-row flex p-5 gap-5 text-sm rounded-lg items-center relative w-full cursor-pointer";
   if (res.status === 204 || res?.song?.is_playing === false) {
     return (
       <article className={className}>
         <Spotify
           width={20}
           height={20}
-          className="absolute top-5 right-5 fill-zinc-500"
+          className="absolute top-4 right-4 fill-zinc-500"
         />
         <div className="w-24 h-24 bg-zinc-200 dark:bg-zinc-800"></div>
         <div className="flex flex-col">
@@ -29,7 +29,7 @@ export const NowPlaying = async () => {
         <Spotify
           width={20}
           height={20}
-          className="absolute top-5 right-5 fill-red-500"
+          className="absolute top-4 right-4 fill-red-500"
         />
         <div className="w-24 h-24 bg-zinc-200 dark:bg-zinc-800"></div>
         <h3 className="text-xl">
@@ -43,7 +43,7 @@ export const NowPlaying = async () => {
       <Spotify
         width={20}
         height={20}
-        className="absolute top-5 right-5 fill-[#1DB954]"
+        className="absolute top-4 right-4 fill-[#1DB954]"
       />
       <Image
         src={res.song.item.album.images.at(0)?.url!}
@@ -56,10 +56,8 @@ export const NowPlaying = async () => {
         target="_blank"
         href={res.song.item.external_urls.spotify}
       >
-        <h5 className="text-lg break-words overflow-hidden">
-          {res.song.item.name}
-        </h5>
-        <span className="text-xs">
+        <h5 className="text-lg break-words">{res.song.item.name}</h5>
+        <span className="text-xs break-words">
           {res.song.item.artists.at(0)?.name} - {res.song.item.album.name}
         </span>
       </Link>
