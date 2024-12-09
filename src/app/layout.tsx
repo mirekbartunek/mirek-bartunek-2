@@ -36,6 +36,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <script 
+ defer 
+ data-site-id="miroslavbartunek.com" 
+ src="https://assets.onedollarstats.com/tracker.js"> 
+</script>
       <body
         className={clsx(
           "bg-zinc-200 text-black, dark:bg-zinc-800 dark:text-white",
